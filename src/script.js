@@ -4,7 +4,6 @@ window.onload = () => {
 
   const countryIndex = urlParams.get('countryIndex');
   
-  console.log("Country index: "+ countryIndex);
   
   const header = document.getElementsByTagName("header")[0];
   const nav = document.getElementsByTagName("nav")[0];
@@ -13,6 +12,13 @@ window.onload = () => {
   const state = document.getElementsByClassName("state");
 
 
+  const countryNames = document.getElementsByClassName("countryNames");
+
+  for(let i = 0; i < countryNames.length; i++){
+    if(i != countryIndex) countryNames[i].style.opacity = 0.5;
+    else  countryNames[i].style.opacity = 1;
+  }
+/*
   switch(countryIndex){
     case '0':  
       header.style.backgroundColor = "#009b3a";
@@ -46,6 +52,8 @@ window.onload = () => {
     default:
         break;
   }
+
+  */
 
   const stateNameBox = document.getElementById('state');
   const states = document.getElementsByClassName('state');

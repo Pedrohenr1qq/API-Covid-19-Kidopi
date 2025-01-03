@@ -90,98 +90,95 @@
   <title>COVID-19 API</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <header>
-    <h1><a href="">COVID-19</a></h1>
-  </header> 
-  <nav>
-    <?php foreach($countries as $key => $country): ?>
-      <div class="nav-bar">
-        <h2><a href= "<?php echo "index.php?countryIndex=" . $key ;?>" ><?php echo $country;?></a></h2> 
-        <img src="<?php echo "images/Countries/Flag_of_{$country}.png"?>" alt="<?php echo "Flag of " . $country?>">
+  <div class="container">
+    <div class="toolbar">
+      <header>
+        <h1><a href="">COVID-19</a></h1>
+        <img src="<?php echo "images/Countries/Flag_of_{$countries[$countryIndex]}.png"?>" alt="<?php echo "Flag of " . $countries[$countryIndex]?>">
+      </header> 
+
+      <nav>
+        <?php foreach($countries as $key => $country): ?>
+          <div class="nav-bar">
+            <h2 class="countryNames"><a href= "<?php echo "index.php?countryIndex=" . $key ;?>" ><?php echo $country;?></a></h2> 
+          </div>
+        <?php endforeach; ?>
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="title-content">
+        <span><b><?php echo $countries[$countryIndex]?></b></span>
       </div>
 
-    <?php endforeach; ?>
-  </nav>
-
-  <div class="container">
-    <div class="country-and-search">
       <section class="datas-by-country">
-        <h2>Cases and deaths in <?php echo $countries[$countryIndex]?></h2>  
-
-        <div class="cases-and-deaths">
-
-          <div class="cases">
-            <h3>Confirmed cases</h3>    
-            <p><?php echo number_format(getTotalConfirmedCases($datasCountry), 0, '.', ',')?></p>
-          </div>
-
-          <div class="Deaths">
-            <h3>Deaths</h3>
-            <p><?php echo number_format(getTotalDeaths($datasCountry), 0, ".", ",") ?></p>
-          </div>
-        
+        <div class="cases">
+          <h3>Confirmed cases</h3>    
+          <p><?php echo number_format(getTotalConfirmedCases($datasCountry), 0, '.', ',')?></p>
         </div>
 
+        <div class="Deaths">
+          <h3>Deaths</h3>
+          <p><?php echo number_format(getTotalDeaths($datasCountry), 0, ".", ",") ?></p>
+        </div>
       </section>
 
-      <div class="form-state">
-        <label for="state">Province/State: </label>
-        <input type="text" id="state" placeholder="Search for a Province/State: ">
-      </div>
-
-    </div>
-
-    <section class="datas-by-state">
-      <?php foreach ($datasCountry as $datasState): ?>
-        <div class="state"> 
-          <h2 class="state-name"><?php echo getNameState($datasState)?></h2>
-
-          <div class="cases-and-deaths">
-
-            <div class="cases">
-              <h3>Confirmed cases</h3>
-              <p> <?php echo number_format(getConfirmedCases($datasState), 0, ".", ",")?> </p>
-              <p> Percent (total): <?php echo number_format(getPercentConfimerdCases($datasState, $datasCountry), 2, '.',',')?>%</p>
-            </div>
-
-            <div class="deaths">
-              <h3>Deaths</h3>
-              <p><?php echo number_format(getDeaths($datasState), 0, ".", ",")?></p>
-              <p> Percent (by state): <?php echo number_format(getPercentDeaths($datasState), 2, '.',',')?>%</p>
-              <p> Percent (total): <?php echo number_format(getTotalPercentDeaths($datasState, $datasCountry), 2, '.',',')?>%</p>
+      <div class="state-infos">
+        <div class="title-states">
+          <span><b>Cases and deaths by state</b></span>
+          <div class="search-and-states">
+            <div class="form-state">
+              <input type="text" id="state" placeholder="Search for a Province/State: ">
             </div>
           </div>
         </div>
-      <?php endforeach;?>
-    </section>
+
+        <div class="state-subjects">
+          <span>Province/State</span>
+          <div class="cases-and-deaths-state">
+            <span>Cases</span>
+            <span>Deaths</span>
+          </div>
+        </div>
+        
+        <div class="state-list">
+          <?php foreach ($datasCountry as $datasState): ?>
+            <div class="state"> 
+              <h2 class="state-name"><?php echo getNameState($datasState)?></h2>
+
+              <div class="cases-and-deaths">
+                <p> <?php echo number_format(getConfirmedCases($datasState), 0, ".", ",")?> </p>
+                <p><?php echo number_format(getDeaths($datasState), 0, ".", ",")?></p>
+              </div>
+            </div>
+          <?php endforeach;?>          
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="lastAcess">
+          <p>Last acess: <?php echo date_format(date_create($log['logAcess']), 'Y/M/d H:i:s');?></p>
+          <p>Country: <?php echo $log['country']?></p>
+        </div>
+      </div>    
+
+      <div class='copyright'>
+          <p>Build by Pedro H. P. Silva</p>
+      </div>
+
+      <div class='contacts'>
+        <h4>Contacts:</h4><br/>
+        <div class="contatcs-imgs">
+          <a target='_blank' rel='noreferrer' href='https://github.com/Pedrohenr1qq'><img src='images/footer/github_icon.png' alt="github-icon"/></a>
+          <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pedro-henrique-pereira-da-silva-8624a8315'><img src='images/footer/linkedin-icon.png' alt='linkedin icon'/></a>
+        </div>
+      </div>
+    </footer>
   </div>
-
-  <footer>
-    <div>
-      <div class="lastAcess">
-        <p>Last acess: <?php echo date_format(date_create($log['logAcess']), 'Y/M/d H:i:s');?></p>
-        <p>Country: <?php echo $log['country']?></p>
-      </div>
-    </div>    
-
-    <div class='copyright'>
-        <p>Build by Pedro H. P. Silva</p>
-    </div>
-
-    <div class='contacts'>
-      <h4>Contacts:</h4><br/>
-      <div class="contatcs-imgs">
-        <a target='_blank' rel='noreferrer' href='https://github.com/Pedrohenr1qq'><img src='images/footer/github_icon.png' alt="github-icon"/></a>
-        <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pedro-henrique-pereira-da-silva-8624a8315'><img src='images/footer/linkedin-icon.png' alt='linkedin icon'/></a>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>
