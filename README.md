@@ -18,7 +18,7 @@ Para que o projeto funcione corretamente, é necessário que todas as dependênc
 
 A seguir, você encontra alguns links que podem ajuda-lo a instalar e configurar as dependências necessárias:
 
-#### XAMPP {#xampp-tag}
+#### XAMPP 
 
 [Instalação e configuração do XAMPP (Apache, MySQL, PHP) no Windows](https://www.youtube.com/watch?v=0Y9OZ0vc1SU)
 
@@ -83,7 +83,7 @@ API_KEY=https://<url-da-API>
 
 ## Como usar o programa
 
-Feita a instalação do programa, inicie o servidor com o XAMPP (Caso não saiba fazer isso, assista o vídeo de configuração e instalação do [XAMPP](#xampp-tag), de acordo com seu sistema operacional)
+Feita a instalação do programa, inicie o servidor com o XAMPP (Caso não saiba fazer isso, assista o vídeo de configuração e instalação do XAMPP, de acordo com seu sistema operacional)
 
 Após iniciado o servidor, copie e cole o seguinte link no seu navegador: `http://localhost/API-Covid-19-Kidopi/public/index.php?countryIndex=0`
 
