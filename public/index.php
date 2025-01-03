@@ -3,11 +3,6 @@
   require_once __DIR__ . '/../vendor/autoload.php';
   use Dotenv\Dotenv;
   $dotenv = Dotenv::createImmutable(__DIR__ . '/../');  $dotenv->load();
-
-  // Require scripts
-  require_once '../src/api/getCovidAPI.php';
-  require_once '../src/db/connectToDB.php';
-  require_once '../src/helpers/helpers.php';
   
   // Configure page
   $countries = ["Brazil", "Canada", "Australia"];
@@ -19,6 +14,12 @@
       $countryIndex = 0;
     }
   }
+
+
+  // Require scripts
+  require_once '../src/api/getCovidAPI.php';
+  require_once '../src/db/connectToDB.php';
+  require_once '../src/helpers/helpers.php';
 
   // Configure database
   insertNewLog($conn, $countries[$countryIndex]);
