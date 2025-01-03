@@ -56,6 +56,14 @@ Verifique se o programa foi baixado corretamente. Caso sim, você pode seguir co
 
 Caso contrário, talvez esse link possa ajudar: [Clonando um repositório do GitHub](https://www.youtube.com/watch?v=5ctmK6fV1NQ)
 
+## Configurando o Banco de dados
+
+Feita a instalação do programa, inicie o servidor com o XAMPP (Caso não saiba fazer isso, assista o vídeo de configuração e instalação do XAMPP, de acordo com seu sistema operacional)
+
+Acesse o link `http://localhost/phpmyadmin/`. Clique na aba "Databases". No campo "Create database", digite um nome para o seu banco de dados e logo após, aperte no botão "Create".
+
+Feito isso, seu banco de dados estará criado e configurado para uso. Guarde o nome do banco de dados.
+
 ## Configurando o DOTENV
 
 Crie um arquivo com nome `.env` no diretório principal do seu programa <b>(API-Covid-19-Kidopi)<b>.
@@ -68,8 +76,8 @@ Se quiser, pode usar os valores padrões:
 
 * DB_HOST=localhost
 * DB_USER=root
-* DB_PASSWORD=       (a senha no mysql do root, por padrão, é vazia)
-* DB_DATABASE=covid19
+* DB_PASSWORD=        (a senha no mysql do root, por padrão, é vazia)
+* DB_DATABASE=        (Nome do banco de dados criado anteriormente, da forma como você digitou)
 * DB_TABLE=acessLogs
 
 Para a API_KEY, acesse o link `https://dev.kidopilabs.com.br/exercicio/covid.php?pais=Brazil` e procure pela URL da API-Covid-19. Copie e cole o link no valor da variavel de ambiente API_KEY. 
@@ -83,7 +91,7 @@ API_KEY=https://<url-da-API>
 
 ## Como usar o programa
 
-Feita a instalação do programa, inicie o servidor com o XAMPP (Caso não saiba fazer isso, assista o vídeo de configuração e instalação do XAMPP, de acordo com seu sistema operacional)
+Inicie o servidor com o XAMPP.
 
 Após iniciado o servidor, copie e cole o seguinte link no seu navegador: `http://localhost/API-Covid-19-Kidopi/public/index.php?countryIndex=0`
 
