@@ -81,7 +81,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +93,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="toolbar">
+    <div id="toolbar" class="toolbar">
       <header>
         <h1><a href="">COVID-19</a></h1>
         <img src="<?php echo "images/Countries/Flag_of_{$countries[$countryIndex]}.png"?>" alt="<?php echo "Flag of " . $countries[$countryIndex]?>">
@@ -103,7 +102,7 @@
       <nav>
         <?php foreach($countries as $key => $country): ?>
           <div class="nav-bar">
-            <h2 class="countryNames"><a href= "<?php echo "index.php?countryIndex=" . $key ;?>" ><?php echo $country;?></a></h2> 
+            <h2 class="country-names" ><a href= "<?php echo "index.php?countryIndex=" . $key ;?>" ><?php echo $country;?></a></h2> 
           </div>
         <?php endforeach; ?>
       </nav>
@@ -111,22 +110,28 @@
 
     <div class="content">
       <div class="title-content">
-        <span><b><?php echo $countries[$countryIndex]?></b></span>
+        <span ><b><?php echo $countries[$countryIndex]?></b></span>
       </div>
 
       <section class="datas-by-country">
         <div class="cases">
-          <h3>Confirmed cases</h3>    
+          <h3 >Confirmed cases</h3>    
           <p><?php echo number_format(getTotalConfirmedCases($datasCountry), 0, '.', ',')?></p>
         </div>
 
         <div class="Deaths">
-          <h3>Deaths</h3>
+          <h3 >Deaths</h3>
           <p><?php echo number_format(getTotalDeaths($datasCountry), 0, ".", ",") ?></p>
         </div>
+
+        <div class="Deaths">
+          <h3 >Total States</h3>
+          <p><?php echo count($datasCountry)?></p>
+        </div>
+
       </section>
 
-      <div class="state-infos">
+      <section class="state-infos">
         <div class="title-states">
           <span><b>Cases and deaths by state</b></span>
           <div class="search-and-states">
@@ -138,7 +143,7 @@
 
         <div class="state-subjects">
           <span>Province/State</span>
-          <div class="cases-and-deaths-state">
+          <div class="cases-and-deaths">
             <span>Cases</span>
             <span>Deaths</span>
           </div>
@@ -156,7 +161,7 @@
             </div>
           <?php endforeach;?>          
         </div>
-      </div>
+      </section>
     </div>
 
     <footer>
