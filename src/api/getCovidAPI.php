@@ -9,4 +9,5 @@
     return $datas;
   }
 
+  $datasCountry = getDatasFromCountry($countries[$countryIndex]);
 ?>

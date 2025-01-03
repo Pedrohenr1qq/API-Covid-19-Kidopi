@@ -1,5 +1,5 @@
 # Dependências do Composer
-/src/vendor/
+/vendor/
 
 # Arquivos de configuração sensíveis
 .env
