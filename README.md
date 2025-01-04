@@ -80,7 +80,7 @@ Se quiser, pode usar os valores padrões:
 * DB_DATABASE=        (Nome do banco de dados criado anteriormente, da forma como você digitou)
 * DB_TABLE=acessLogs
 
-Para a API_KEY, acesse o link `https://dev.kidopilabs.com.br/exercicio/covid.php?pais=Brazil` e procure pela URL da API-Covid-19. Copie e cole o link no valor da variavel de ambiente API_KEY. 
+Para a API_KEY, acesse o link `https://dev.kidopilabs.com.br/exercicio/covid.php?pais=Brazil` e procure pela URL da API-Covid-19. Copie e cole o link no valor da variavel de ambiente API_KEY. Não copie o nome do país, apenas até o sinal de "=".
 
 Caso o link acima não esteja mais disponível, então é poque o acesso à API não está mais liberado publicamente.
 
