@@ -79,10 +79,8 @@
       <section class="state-infos">
         <div class="title-states">
           <span><b>Cases and deaths by state</b></span>
-          <div class="search-and-states">
-            <div class="form-state">
-              <input type="text" id="state" placeholder="Search for a Province/State: ">
-            </div>
+          <div class="form-state">
+            <input type="text" id="state" placeholder="Search for a Province/State: ">
           </div>
         </div>
 
@@ -115,17 +113,19 @@
           <p>Last acess: <?php echo date_format(date_create($log['logAcess']), 'Y/M/d H:i:s');?></p>
           <p>Country: <?php echo $log['country']?></p>
         </div>
-      </div>    
+      </div> 
+      
+      <div class="more-info">
+        <div class='copyright'>
+            <p>Build by Pedro H. P. Silva</p>
+        </div>
 
-      <div class='copyright'>
-          <p>Build by Pedro H. P. Silva</p>
-      </div>
-
-      <div class='contacts'>
-        <h4>Contacts:</h4><br/>
-        <div class="contatcs-imgs">
-          <a target='_blank' rel='noreferrer' href='https://github.com/Pedrohenr1qq'><img src='./images/footer/github_icon.png' alt="github-icon"/></a>
-          <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pedro-henrique-pereira-da-silva-8624a8315'><img src='./images/footer/linkedin-icon.png' alt='linkedin icon'/></a>
+        <div class='contacts'>
+          <h4>Contacts:</h4><br/>
+          <div class="contatcs-imgs">
+            <a target='_blank' rel='noreferrer' href='https://github.com/Pedrohenr1qq'><img src='./images/footer/github_icon.png' alt="github-icon"/></a>
+            <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pedro-henrique-pereira-da-silva-8624a8315'><img src='./images/footer/linkedin-icon.png' alt='linkedin icon'/></a>
+          </div>
         </div>
       </div>
     </footer>
