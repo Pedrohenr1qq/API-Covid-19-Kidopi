@@ -183,6 +183,18 @@ footer{
   padding: 10px;
 }
 
+.last-acess{
+  width: 30%;
+}
+
+.more-info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 28%;
+}
+
 .contacts{
   display: flex;
   justify-content: space-between;
@@ -294,18 +306,23 @@ footer{
     font-size: 14px;
   }
 
-  footer div{
+  .last-acess{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   .more-info{
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0px;
   }
+
   .contacts{
-    width: 40%;
+    width: auto;
     display: flex;
     align-items: center;
   }
@@ -388,31 +405,4 @@ footer{
     overflow-x: scroll;
   }
 
-  footer{
-    margin-top: 20px;
-    display: block;
-    font-size: 14px;
-  }
-
-  footer div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .more-info{
-    margin-top: 10px;
-  }
-  .contacts{
-    width: 40%;
-    display: flex;
-    align-items: center;
-  }
-
-  .contatcs-imgs img{
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-  }
 }

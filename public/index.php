@@ -108,13 +108,11 @@
     </div>
 
     <footer>
-      <div>
-        <div class="lastAcess">
-          <p>Last acess: <?php echo date_format(date_create($log['logAcess']), 'Y/M/d H:i:s');?></p>
-          <p>Country: <?php echo $log['country']?></p>
-        </div>
-      </div> 
-      
+      <div class="last-acess">
+        <p>Last acess: <?php echo date_format(date_create($log['logAcess']), 'Y/M/d H:i:s');?></p>
+        <p>Country: <?php echo $log['country']?></p>
+      </div>
+    
       <div class="more-info">
         <div class='copyright'>
             <p>Build by Pedro H. P. Silva</p>
