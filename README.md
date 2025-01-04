@@ -49,7 +49,7 @@ Abra um terminal.
 Vá para o diretório htdocs do XAMPP o programa e digite o seguinte comando:
 
 ```
-https://github.com/Pedrohenr1qq/API-Covid-19-Kidopi.git
+git clone https://github.com/Pedrohenr1qq/API-Covid-19-Kidopi.git
 ```
 
 Verifique se o programa foi baixado corretamente. Caso sim, você pode seguir com a explicação abaixo.
