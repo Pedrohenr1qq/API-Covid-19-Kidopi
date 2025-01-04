@@ -28,7 +28,7 @@ A seguir, você encontra alguns links que podem ajuda-lo a instalar e configurar
 
 #### Composer
 
-[Instalação do Composer](https://www.youtube.com/watch?v=VeK3UvBKtqU);
+[Instalação do Composer](https://www.youtube.com/watch?v=VeK3UvBKtqU)
 
 #### DOTENV
 
@@ -49,7 +49,7 @@ Abra um terminal.
 Vá para o diretório htdocs do XAMPP o programa e digite o seguinte comando:
 
 ```
-git clone https://github.com/Pedrohenr1qq/pizzeria-API.git 
+https://github.com/Pedrohenr1qq/API-Covid-19-Kidopi.git
 ```
 
 Verifique se o programa foi baixado corretamente. Caso sim, você pode seguir com a explicação abaixo.
